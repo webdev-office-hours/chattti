@@ -23,11 +23,12 @@ export default {
     };
   },
   firestore: {
-    messages: db.collection("messages")
+    messages: db.collection("messages").orderBy("createdAt")
   },
   methods: {
     sendMessage(message) {
-      this.$firestoreRefs.messages.add({
+      db.collection("messages").add({
+        createdAt: new Date(),
         value: message
       });
 
