@@ -27,7 +27,10 @@ export default {
   },
   methods: {
     sendMessage(message) {
-      this.messages = [...this.messages, message];
+      this.$firestoreRefs.messages.add({
+        value: message
+      });
+
       this.newMessage = "";
     }
   }
