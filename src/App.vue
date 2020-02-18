@@ -9,6 +9,7 @@
 
 <script>
 import MessagesList from "./components/MessagesList";
+import { db } from "../db";
 
 export default {
   name: "App",
@@ -20,6 +21,9 @@ export default {
       messages: [],
       newMessage: ""
     };
+  },
+  firestore: {
+    messages: db.collection("messages")
   },
   methods: {
     sendMessage(message) {
