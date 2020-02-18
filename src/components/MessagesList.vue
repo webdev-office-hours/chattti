@@ -1,7 +1,11 @@
 <template>
   <ul>
-    <li>message 1</li>
-    <li>message 2</li>
-    <li>message 3</li>
+    <li v-for="(message, index) in messageList" :key="index">{{message}}</li>
   </ul>
 </template>
+
+<script>
+export default {
+  props: ["messageList"]
+};
+</script>

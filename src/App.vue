@@ -1,9 +1,9 @@
 <template>
   <div>
     <h2>Chattty!</h2>
-    <MessagesList />
-    <input type="text" placeholder="Enter Messsage" />
-    <button>Send</button>
+    <MessagesList :messageList="messages" />
+    <input type="text" placeholder="Enter Messsage" v-model="newMessage" />
+    <button @click="sendMessage(newMessage)">Send</button>
   </div>
 </template>
 
@@ -14,6 +14,18 @@ export default {
   name: "App",
   components: {
     MessagesList
+  },
+  data() {
+    return {
+      messages: [],
+      newMessage: ""
+    };
+  },
+  methods: {
+    sendMessage(message) {
+      this.messages = [...this.messages, message];
+      this.newMessage = "";
+    }
   }
 };
 </script>
