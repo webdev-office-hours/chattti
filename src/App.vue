@@ -2,7 +2,7 @@
   <div>
     <h2>Chattty!</h2>
     <MessagesList :messageList="messages" />
-    <span v-if="!isValidMessage">Please enter a message</span>
+    <span v-if="!isValidMessage">Test Please enter a message</span>
     Your automatically generated chat name: {{name}}
     <br />
     <input type="text" placeholder="Enter Messsage" v-model="newMessage" />
