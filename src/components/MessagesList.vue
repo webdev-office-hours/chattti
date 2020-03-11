@@ -1,6 +1,9 @@
 <template>
   <ul>
-    <li v-for="(message, index) in messageList" :key="index">{{message.value}}</li>
+    <li v-for="(message, index) in messageList" :key="index">
+      <strong>{{message.name}}</strong>
+      : {{message.value}}
+    </li>
   </ul>
 </template>
 
