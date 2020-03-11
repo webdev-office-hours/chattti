@@ -5,8 +5,8 @@
     <span v-if="!isValidMessage">Test Please enter a message</span>
     Your automatically generated chat name: {{name}}
     <br />
-    <input type="text" placeholder="Enter Messsage" v-model="newMessage" />
-    <button @click="sendMessage(newMessage)">Send</button>
+    <input class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 appearance-none leading-normal" type="text" placeholder="Enter Messsage" v-model="newMessage" />
+    <button class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded" @click="sendMessage(newMessage)">Send</button>
   </div>
 </template>
 
