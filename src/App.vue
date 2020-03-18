@@ -70,6 +70,7 @@
               class="flex-grow w-3/4 bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-l-lg py-2 px-4 appearance-none leading-normal"
               type="text"
               placeholder="Enter Messsage"
+              v-on:keyup.enter="sendMessage(newMessage)"
               v-model="newMessage"
             />
             <button
