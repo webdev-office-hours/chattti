@@ -59,7 +59,7 @@
         <div class="md:w-1/2 py-4 md:px-10 mb-4 md:mb-0 md:border-l">
           <img class="mx-auto mb-3" src="placeholders/icons/cloud-tools.svg" alt />
           <h2>Chattty!</h2>
-          <MessagesList class="my-5" :messageList="messages" />
+          <MessagesList class="my-5" :messageList="messages" :activeUser="name"/>
           <span v-if="!isValidMessage">Test Please enter a message</span>
           <span class="border-t border-purple-300 py-1 flex">
             Your automatically generated chat name:
